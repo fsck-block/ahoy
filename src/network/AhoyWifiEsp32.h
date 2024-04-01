@@ -61,6 +61,7 @@ class AhoyWifi : public AhoyNetwork {
                         MDNS.begin(mConfig->sys.deviceName);
                         mOnNetworkCB(true);
                     }
+                    MDNS.update();
                     break;
             }
         }

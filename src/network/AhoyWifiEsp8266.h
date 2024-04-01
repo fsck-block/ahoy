@@ -95,7 +95,7 @@ class AhoyWifi : public AhoyNetwork {
                         MDNS.begin(mConfig->sys.deviceName);
                         mOnNetworkCB(true);
                     }
-
+                    MDNS.update();
                     if(WiFi.channel() > 11)
                         mWasInCh12to14 = true;
                     break;
